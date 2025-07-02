@@ -5,17 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Simon Game</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Merriweather:ital,opsz,wdth,wght@0,18..144,112,300..900;1,18..144,112,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Joti+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Merriweather:ital,opsz,wdth,wght@0,18..144,112,300..900;1,18..144,112,300..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>Press Enter to start!</header>
+    <div class="platform">
     <div class="container">
       <div class="btn red" id="red"></div>
       <div class="btn green" id="green"></div>
       <div class="btn yellow" id="yellow"></div>
       <div class="btn blue" id="blue"></div>
-      <div class="center-circle">Simon</div>
+      <div class="center-circle">The<br />Simon<br/> game</div>
     </div>
-     <script
+    </div>
+    <div class="score-display">
+      <!-- <h2>Score: <span class="currScore">0</span></h2> -->
+      <h2>High Score: <span class="highScore">0</span></h2>
+    </div>
+    <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"

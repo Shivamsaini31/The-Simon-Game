@@ -3,6 +3,7 @@ var lvl=1;
 var len=0;
 var clicked=[];
 var ended=false;
+var highScore=0;
 var buttons=["red","green","yellow","blue"];
 $(document).off("keydown").on("keydown",function(event){
     if(event.key==="Enter"){
@@ -31,6 +32,8 @@ function makeSound(toClick){
     audio.play();
 }
 $(".btn").on("click",function(event){
+    highScore=Math.max(highScore,lvl);
+    $(".highScore").text(highScore);
     if(!isStarted)return;
     len++;
     if(buttons[clicked[len-1]]===event.target.id){

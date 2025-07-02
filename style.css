@@ -1,17 +1,27 @@
+*{
+  margin:0px;
+  padding:0px;
+}
 body{
-  background:#000;
+  background:#0065F0;
+  height:100vh;
+}
+.platform{
+  height:80vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100vh;
 }
 header{
     color:white;
-    position:absolute;
+    position:relative;
     top: 10px;
+    text-align:center;
     font-size: 3rem;
+    font-family: "Hanalei fill",serif;
 }
 .container {
+  display:block;
   position:relative;
   width:500px;
   height:500px;
@@ -19,7 +29,7 @@ header{
   border-top-right-radius:160px;
   border-bottom-right-radius:160px;
   border-bottom-left-radius:160px;
-  background:#03A791
+  background:black;
 }
 .btn{
   position:absolute;
@@ -31,25 +41,25 @@ header{
 #red{
   top:0;
   left:0;
-  background:red;
+  background:#F24E4B;
   border-top-left-radius:150px;
 }
 #green{
   top:0;
   right:0;
-  background:green;
+  background:#0CF097;
   border-top-right-radius:150px;
 }
 #blue{
   bottom:0;
   left:0;
-  background:blue;
+  background:#1D93F2;
   border-bottom-left-radius:150px;
 }
 #yellow{
   bottom:0;
   right:0;
-  background:yellow;
+  background:#F0E73E;
   border-bottom-right-radius:150px;
 }
 .center-circle {
@@ -66,7 +76,9 @@ header{
   line-height:100px;
   color:white;
   font-weight:bold;
-  font-family:sans-serif;
+  font-family:"Joti one",sans-serif;
+  font-size:1.5rem;
+  line-height:1.7;
 }
 .btn:hover{
     opacity:0.8;
@@ -78,4 +90,11 @@ header{
 .wrongAns{
     background-color: #5c0512;
 }
-
+.score-display{
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  right:20%;
+  color:white;
+  font-family:"Hanalei fill",serif;
+}
