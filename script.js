@@ -17,8 +17,9 @@ function startTheGame(){
     ended=false;
     $("header").text("LEVEL "+lvl);
     var toClick=Math.floor(Math.random()*4);
-    clickButton(toClick);
     clicked.push(toClick);
+    playSequence();
+    // clickButton(toClick);
 }
 function clickButton(toClick){
     $("#"+buttons[toClick]).addClass("pressed");
@@ -30,6 +31,16 @@ function clickButton(toClick){
 function makeSound(toClick){
     var audio=new Audio("sounds/"+buttons[toClick]+".mp3");
     audio.play();
+}
+function playSequence(){
+    let i=0;
+    const interval=setInterval(()=>{
+        clickButton(clicked[i]);
+        i++;
+        if(i>=clicked.length()){
+            clearInterval(interval);
+        }
+    },600);
 }
 $(".btn").on("click",function(event){
     highScore=Math.max(highScore,lvl);

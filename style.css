@@ -3,7 +3,7 @@
   padding:0px;
 }
 body{
-  background:#0065F0;
+  background:#ffab44;
   height:100vh;
 }
 .platform{
@@ -81,7 +81,10 @@ header{
   line-height:1.7;
 }
 .btn:hover{
-    opacity:0.8;
+    opacity:0.6;
+}
+.btn:active{
+  transform:scale(0.9);
 }
 .pressed{
   box-shadow: 0px 3px 4px 0 #DBEDF3;
@@ -97,4 +100,8 @@ header{
   right:20%;
   color:white;
   font-family:"Hanalei fill",serif;
+  border:solid black 2px;
+  padding:5px;
+  box-shadow:3px 3px 0 0 #000;
+  border-radius:10px;
 }
