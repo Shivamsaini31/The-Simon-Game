@@ -16,6 +16,8 @@ function startTheGame(){
     isStarted=true;
     ended=false;
     $("header").text("LEVEL "+lvl);
+    highScore=Math.max(highScore,lvl);
+    $(".highScore").text(highScore);
     var toClick=Math.floor(Math.random()*4);
     clicked.push(toClick);
     playSequence();
@@ -43,8 +45,6 @@ function playSequence(){
     },600);
 }
 $(".btn").on("click",function(event){
-    highScore=Math.max(highScore,lvl);
-    $(".highScore").text(highScore);
     if(!isStarted)return;
     len++;
     if(buttons[clicked[len-1]]===event.target.id){
