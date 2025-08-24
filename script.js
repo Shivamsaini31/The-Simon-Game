@@ -125,7 +125,7 @@ function playSequence() {
 function nextLvl() {
   len = 0;
   lvl++;
-  highScore = Math.max(highScore, lvl-1);
+  highScore = Math.max(highScore, lvl - 1);
   updateDisplay();
   $("#status-text").text("Great! Level " + lvl + " coming up...");
 
@@ -157,6 +157,6 @@ function endTheGame() {
 
 function updateDisplay() {
   $("#level-number").text(lvl);
-  $("#current-score").text(lvl-1);
+  $("#current-score").text(lvl - 1);
   $("#high-score").text(highScore);
 }
