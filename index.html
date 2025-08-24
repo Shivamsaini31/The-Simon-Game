@@ -8,29 +8,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Merriweather:ital,opsz,wdth,wght@0,18..144,112,300..900;1,18..144,112,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Joti+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Merriweather:ital,opsz,wdth,wght@0,18..144,112,300..900;1,18..144,112,300..900&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
   <body>
-    <header>Press Enter to start!</header>
-    <div class="platform">
-    <div class="container">
-      <div class="btn red" id="red"></div>
-      <div class="btn green" id="green"></div>
-      <div class="btn yellow" id="yellow"></div>
-      <div class="btn blue" id="blue"></div>
-      <div class="center-circle">The<br />Simon<br/> game</div>
+    <div class="game-container">
+      <header class="game-header">
+        <h1 class="game-title">SIMON</h1>
+        <div class="game-status">
+          <div class="status-text" id="status-text">Press ENTER to start</div>
+          <div class="level-indicator">
+            <span class="level-label">LEVEL</span>
+            <span class="level-number" id="level-number">0</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-main">
+        <div class="simon-container">
+          <div class="simon-platform">
+            <div class="simon-button red" id="red" data-color="red">
+              <div class="button-inner"></div>
+            </div>
+            <div class="simon-button green" id="green" data-color="green">
+              <div class="button-inner"></div>
+            </div>
+            <div class="simon-button yellow" id="yellow" data-color="yellow">
+              <div class="button-inner"></div>
+            </div>
+            <div class="simon-button blue" id="blue" data-color="blue">
+              <div class="button-inner"></div>
+            </div>
+            <div class="center-controls">
+              <div class="center-logo">
+                <i class="fas fa-gamepad"></i>
+              </div>
+              <div class="control-buttons">
+                <button class="control-btn start-btn" id="start-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn restart-btn" id="restart-btn">
+                  <i class="fas fa-redo"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-info">
+          <div class="score-panel">
+            <div class="score-item">
+              <span class="score-label">Current</span>
+              <span class="score-value" id="current-score">0</span>
+            </div>
+            <div class="score-item">
+              <span class="score-label">Best</span>
+              <span class="score-value" id="high-score">0</span>
+            </div>
+          </div>
+
+          <div class="game-instructions">
+            <h3>How to Play</h3>
+            <ul>
+              <li>Watch the sequence carefully</li>
+              <li>Repeat the pattern in order</li>
+              <li>Each level adds one more step</li>
+              <li>Don't break the chain!</li>
+            </ul>
+          </div>
+        </div>
+      </main>
     </div>
-    </div>
-    <div class="score-display">
-      <!-- <h2>Score: <span class="currScore">0</span></h2> -->
-      <h2>High Score: <span class="highScore">0</span></h2>
-    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
